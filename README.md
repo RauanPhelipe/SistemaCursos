@@ -80,7 +80,7 @@ A solução adota a arquitetura **MVC (Model-View-Controller)** adaptada para ap
 - **Gerenciar Cursos:**
   - Cadastrar curso com validação de unicidade e carga horária positiva.
   - Listar todos os cursos cadastrados.
-  - Consultar curso por ID, exibindo os dados e a contagem de matrículas ativas.
+  - Consultar curso por ID, mostrando os dados e a contagem de matrículas ativas.
   - Atualizar os dados de um curso.
   - Excluir curso (com proteção automática caso possua matrículas associadas).
 - **Gerenciar Matrículas:**
