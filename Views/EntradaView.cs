@@ -32,6 +32,9 @@ public static class EntradaView
             Console.Write(mensagem);
             string? valor = Console.ReadLine();
 
+            if (valor is null)
+                throw new EndOfStreamException("Entrada de dados encerrada (EOF).");
+
             if (!string.IsNullOrWhiteSpace(valor))
                 return valor.Trim();
 
@@ -46,6 +49,9 @@ public static class EntradaView
             Console.Write(mensagem);
             string? entrada = Console.ReadLine();
 
+            if (entrada is null)
+                throw new EndOfStreamException("Entrada de dados encerrada (EOF).");
+
             if (int.TryParse(entrada, out int valor) && valor >= minimo)
                 return valor;
 
@@ -59,6 +65,9 @@ public static class EntradaView
         {
             Console.Write(mensagem);
             string? entrada = Console.ReadLine();
+
+            if (entrada is null)
+                throw new EndOfStreamException("Entrada de dados encerrada (EOF).");
 
             if (DateTime.TryParseExact(entrada?.Trim(), FormatosData, CultureInfo.InvariantCulture,
                     DateTimeStyles.None, out DateTime data) && data.Date <= DateTime.Today)
